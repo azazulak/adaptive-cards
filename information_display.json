@@ -1,0 +1,171 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.4",
+    "body": [
+        {
+            "type": "Container",
+            "style": "warning",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "40px",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAABLCAMAAAAPkIrYAAABzlBMVEUAAAAAAACAgIBVVVVAQEAzMzNVVVVJSUlAQEBVVVVNTU1GRkZVVVVOTk5JSUlRUVFNTU1RUVFOTk5KSkpHR0dOTk5MTExPT09NTU1KSkpQUFBMTExKSkpOTk5NTU1LS0tPT09LS0tKSkpMTExKSkpOTk5NTU1MTExMTExLS0tOTk5NTU1KSkpMTExLS0tLS0tNTU1NTU1MTExLS0tNTU1MTExLS0tNTU1MTExLS0tNTU1MTExNTU1MTExNTU1MTExNTU1MTExMTExLS0tMTExNTU1MTExLS0tNTU1MTExNTU1LS0tMTExLS0tNTU1MTExMTExNTU1LS0tMTExMTExNTU1MTExMTExLS0tNTU1LS0tMTExMTExNTU1MTExMTExLS0tMTExNTU1MTExMTExNTU1MTExMTExMTExMTExMTExNTU1MTExMTExNTU1MTExMTExMTExMTExMTExMTExMTExMTExLS0tMTExMTExMTExMTExMTExNTU1MTExMTExLS0tMTExMTExMTExMTExMTExMTExNTU1MTExMTExMTExMTExMTExMTExMTExMTExMTExNTU1MTExMTExMTExMTExMTExMTExMTEz///+PBDlCAAAAmHRSTlMAAQIDBAUGBwgJCgsMDQ4TFBYXGBkaGx0eHyAlJicoKSosLS8wMTJAQ0RFRkhKS05PUFFSU1RVVldYWV5jZWdoamtsbW90dXd4eXuBg4SFhoeIjpCRkpOUlZaYoaKjpKWmp6qrrK2ur7Gys7S1tre7vMzOz9DR1NXW19na29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy+/z9/nA9k4EAAAABYktHRJkB1jaoAAADmElEQVRYw+2Y11cTQRTGNwEVxAZIUwxgRUQQ1AQbRSFgL1iIIlhQCPaCFSkGkqgUkZTfn+vD7uG4mZnN7p7jE9y33O/Ol5k7d28ZTVuTVSBeX3N36GH4VfhhqLvJ53VPtL3jyQL/yvxQe7EbotwTL5OIknzRkuuQaf2pr6hkqjPfCVXjtGl1ajFl+j3ZYN9PIyurZvrba8vyNU3LLz/Y0T+7oh+26be6n8aC6ctVGVD1le8GFq+1Q3XBOM+bo7IQ8B5/a5y7J3tA9emmkWMqC49/Rje5lSXcvIMApG8WWBhtup0G4L41WS8AS8ez3bMewyFLX+lXvjOrK3x60Fj4rC4F8KHExg2VfgRIKW+zKA4QKbMVOSVTAD9V/xsGWNhpM6J9vwGeKhwKkG6UQdtkyuY0wGEZlDcF0CtBAnHifon+DsDEegnSBhDZJAL7E0BinwhsngU4I8lXkwCyaL8KwBXZhgG+ifnsBMAbzRGX5x1AQNC/VG3LOONeGeQHeC7krCQwLf/A/DGi8q/KGwESRRnaDoDLqljaqgKuAbRlKJ8AVDmuMDUAjzM2OwdEXJSrWWDe7JoqgH4XXAMAu0yqJoB21YL8GmUVOwtg/u66AVQJZN8PYntUaQogaFLdBVAlmxfAMwVWIebXBwCqg3wGPiuwjQADJtUokNBccHmSwIhJ9RpYdsOlLQOv/9u+HgDkueAqEP11F6DcBdcO8R4t48uK6xBAlxj3HS64zolx77P6Hq24BgEqxTwRdcEVFfOENgRQ7ZhrN8CjDGW7qj5Yc10HaM1QFieA716HXDkzQKJQlgzkdciCqwVgVK5+63HE5RkDENuD3Am53orrJMB4jgi0AsS2OODS+4nTEmTDJMBtCTIGvJfoQwDjsj5HawBIN4vAJeCiogGgXh4swwCLPtGVweEu0SnVSwBDqn41BjBTbqswlk4D/NiuwmtTAB9LbVCVfQJIHlBb9OgzlS8rVXUEsTBmyA0A/gSyUDUtAtBnPQ/d1+ehO5stjLaE9OHqXrbh6pZuNxvwqCrPyahu0pv9WeC8MT++80vnx5YxY4gP2rnt2rgxu0au1WSmvuvG7EjsgL2eqvjpylwdHThbV1GgaVpBxaFzA7EV/VCh7Q6tYcI096cX06bf4/VO2r11p74o3ycmO/OcvpsEnickRIln/hw3zzBFbY/nTES/HrUWaq7FW3kkGBoMvwoP9gUbKz1rD2+rQf4Cb6dCtCnRmhQAAAAASUVORK5CYII=",
+                                    "height": "30px",
+                                    "width": "30px"
+                                }
+                            ],
+                            "verticalContentAlignment": "Center",
+                            "horizontalAlignment": "Center"
+                        },
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "This is **Staff Only** knowledge",
+                                    "wrap": true,
+                                    "size": "Large",
+                                    "weight": "Bolder",
+                                    "spacing": "None"
+                                }
+                            ],
+                            "verticalContentAlignment": "Center"
+                        }
+                    ]
+                }
+            ],
+            "bleed": true,
+            "spacing": "None"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Topic.FinalAnswer",
+            "wrap": true,
+            "size": "Medium"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Has this resolved your enquiry?",
+            "separator": true,
+            "wrap": true,
+            "size": "Default",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "style": "good",
+                    "width": "stretch",
+                    "selectAction": {
+                        "type": "Action.Submit",
+                        "id": "Yes"
+                    },
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Yes",
+                            "horizontalAlignment": "Center",
+                            "verticalContentAlignment": "center",
+                            "size": "Large",
+                            "weight": "Bolder",
+                            "color": "Default"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "style": "attention",
+                    "width": "stretch",
+                    "selectAction": {
+                        "type": "Action.ToggleVisibility"
+                    },
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "No",
+                            "horizontalAlignment": "Center",
+                            "verticalContentAlignment": "center",
+                            "size": "Large",
+                            "weight": "Bolder",
+                            "color": "Default",
+                            "height": "stretch"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "style": "attention",
+            "id": "reportActions",
+            "isVisible": false,
+            "spacing": "None",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "The answer was...",
+                    "spacing": "Small",
+                    "horizontalAlignment": "Center",
+                    "fontType": "Default",
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "color": "Dark",
+                    "isSubtle": false
+                },
+                {
+                    "type": "ActionSet",
+                    "horizontalAlignment": "Center",
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Irrelevant"
+                        },
+                        {
+                            "type": "Action.Submit",
+                            "title": "Inaccurate"
+                        },
+                        {
+                            "type": "Action.Submit",
+                            "title": "Both"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "style": "emphasis",
+            "bleed": true,
+            "separator": true,
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Submit specific feedback on this question and answer pair.",
+                    "horizontalAlignment": "Center",
+                    "verticalContentAlignment": "center",
+                    "size": "Default",
+                    "weight": "light",
+                    "color": "Default",
+                    "isSubtle": false,
+                    "wrap": true
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Disregard Interaction"
+        }
+    ]
+}
