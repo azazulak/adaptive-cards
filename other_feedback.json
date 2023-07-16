@@ -1,0 +1,49 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "Container",
+            "style": "emphasis",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "**Feedback For This Answer**",
+                    "wrap": true,
+                    "size": "Large"
+                }
+            ],
+            "horizontalAlignment": "Left",
+            "rtl": false,
+            "bleed": true
+        },
+        {
+            "type": "TextBlock",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "Please input any specific feedback regarding the answer you have just received below.",
+            "style": "heading",
+            "wrap": true,
+            "fontType": "Default",
+            "isSubtle": false
+        },
+        {
+            "type": "Input.Text",
+            "placeholder": "Please type your response here",
+            "isRequired": true,
+            "id": "TextFeedback",
+            "label": "Response",
+            "spacing": "Small",
+            "isMultiline": true,
+            "errorMessage": "You must input a response in the text box."
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Submit"
+            
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.4"
+}
