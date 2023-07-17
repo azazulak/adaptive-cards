@@ -92,7 +92,14 @@
                     ],
                     "style": "destructive"
                 }
-            ]
+            ],
+            "id": "Buttons1"
+        },
+        {
+            "type": "TextBlock",
+            "text": "TEMP Q2",
+            "wrap": true,
+            "id": "Q2"
         }
     ],
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
