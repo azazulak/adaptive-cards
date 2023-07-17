@@ -1,4 +1,6 @@
 {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.4",
     "type": "AdaptiveCard",
     "body": [
         {
@@ -23,7 +25,7 @@
             "items": [
                 {
                     "type": "TextBlock",
-                    "text": "Today, I found the HiQnA KA to be easy-to-use.",
+                    "text": "Please click the button that best represents your view",
                     "horizontalAlignment": "Left",
                     "wrap": true,
                     "size": "Medium",
@@ -61,7 +63,7 @@
                     "separator": true,
                     "style": "expanded",
                     "id": "Choice1",
-                    "label": "Please click the button that best represents your view",
+                    "label": "Today, I found the HiQnA KA to be intuitive and easy-to-use.",
                     "errorMessage": "🚩 Please make sure you have selected a response for all four questions."
                 }
             ],
@@ -72,7 +74,7 @@
             "items": [
                 {
                     "type": "TextBlock",
-                    "text": "Today, peepeepoopoo.",
+                    "text": "Please click the button that best represents your view",
                     "horizontalAlignment": "Left",
                     "wrap": true,
                     "size": "Medium",
@@ -110,7 +112,7 @@
                     "separator": true,
                     "style": "expanded",
                     "id": "Choice2",
-                    "label": "Please click the button that best represents your view",
+                    "label": "I received accurate and up-to-day information from the KA today.",
                     "errorMessage": "🚩 Please make sure you have selected a response for all four questions."
                 }
             ],
@@ -202,31 +204,87 @@
             "actions": [
                 {
                     "type": "Action.ToggleVisibility",
-                    "title": "Previous Question"
+                    "title": "Previous Question",
+                    "targetElements": [
+                        {
+                            "elementId": "Q2",
+                            "isVisible": true
+                        },
+                        {
+                            "elementId": "Q3",
+                            "isVisible": false
+                        },
+                        {
+                            "elementId": "Set3",
+                            "isVisible": false
+                        },
+                        {
+                            "elementId": "Set2",
+                            "isVisible": true
+                        }
+                    ],
+                    "style": "destructive"
                 },
                 {
                     "type": "Action.ToggleVisibility",
-                    "title": "Next Question"
+                    "title": "Next Question",
+                    "targetElements": [
+                        {
+                            "elementId": "Q3",
+                            "isVisible": false
+                        },
+                        {
+                            "elementId": "Q4",
+                            "isVisible": true
+                        },
+                        {
+                            "elementId": "Set4",
+                            "isVisible": true
+                        },
+                        {
+                            "elementId": "Set3",
+                            "isVisible": false
+                        }
+                    ]
                 }
             ],
-            "isVisible": false
+            "isVisible": false,
+            "id": "Set3"
         },
         {
             "type": "ActionSet",
+            "isVisible": false,
+            "id": "Set4",
             "actions": [
                 {
-                    "type": "Action.Submit",
-                    "title": "Previous Feedback",
-                    "style": "positive"
+                    "type": "Action.ToggleVisibility",
+                    "title": "Previous Question",
+                    "style": "destructive",
+                    "targetElements": [
+                        {
+                            "elementId": "Q3",
+                            "isVisible": true
+                        },
+                        {
+                            "elementId": "Q4",
+                            "isVisible": false,
+                        },
+                        {
+                            "elementId": "Set4",
+                            "isVisible": false
+                        },
+                        {
+                            "elementId": "Set3",
+                            "isVisible": true
+                        }
+                    ]
                 },
                 {
                     "type": "Action.Submit",
-                    "title": "✔ Submit Feedback"
+                    "title": "✔ Submit Feedback",
+                    "style":"positive"
                 }
-            ],
-            "isVisible": false
+            ]
         }
-    ],
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.4"
+    ]
 }
