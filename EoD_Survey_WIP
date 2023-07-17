@@ -62,10 +62,60 @@
                     "style": "expanded",
                     "id": "Choice1",
                     "label": "Please click the button that best represents your view",
-                    "errorMessage": "💣 An error has occurred. Please alert the HiQnA KA Team."
+                    "errorMessage": "🚩 Please make sure you have selected a response for all four questions."
                 }
             ],
             "id": "Q1"
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Today, peepeepoopoo.",
+                    "horizontalAlignment": "Left",
+                    "wrap": true,
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "color": "Accent"
+                },
+                {
+                    "type": "Input.ChoiceSet",
+                    "choices": [
+                        {
+                            "title": "1: 🟥Strongly Disagree ",
+                            "value": "1"
+                        },
+                        {
+                            "title": "2: 🟧Disagree",
+                            "value": "2"
+                        },
+                        {
+                            "title": "3: 🟨Neither Agree nor Disagree",
+                            "value": "3"
+                        },
+                        {
+                            "title": "4: 🟩Agree",
+                            "value": "4"
+                        },
+                        {
+                            "title": "5: ✅Strongly Agree ",
+                            "value": "5"
+                        }
+                    ],
+                    "placeholder": "Responses (Likert Scale)",
+                    "isRequired": true,
+                    "wrap": true,
+                    "spacing": "Small",
+                    "separator": true,
+                    "style": "expanded",
+                    "id": "Choice2",
+                    "label": "Please click the button that best represents your view",
+                    "errorMessage": "🚩 Please make sure you have selected a response for all four questions."
+                }
+            ],
+            "id": "Q2",
+            "isVisible": false
         },
         {
             "type": "ActionSet",
@@ -90,8 +140,7 @@
                             "elementId": "Set1",
                             "isVisible": false
                         }
-                    ],
-                    "style": "positive"
+                    ]
                 }
             ],
             "id": "Set1"
@@ -99,21 +148,6 @@
         {
             "type": "ActionSet",
             "actions": [
-                {
-                    "type": "Action.ToggleVisibility",
-                    "title": "UNCONFIGURED... Next Question",
-                    "targetElements": [
-                        {
-                            "elementId": "Q1",
-                            "isVisible": false
-                        },
-                        {
-                            "elementId": "Q2",
-                            "isVisible": true
-                        }
-                    ],
-                    "style": "positive"
-                },
                 {
                     "type": "Action.ToggleVisibility",
                     "title": "Previous Question",
@@ -136,6 +170,28 @@
                         }
                     ],
                     "style": "destructive"
+                },
+                {
+                    "type": "Action.ToggleVisibility",
+                    "title": "Next Question",
+                    "targetElements": [
+                        {
+                            "elementId": "Q2",
+                            "isVisible": false
+                        },
+                        {
+                            "elementId": "Q3",
+                            "isVisible": true
+                        },
+                        {
+                            "elementId": "Set3",
+                            "isVisible": true
+                        },
+                        {
+                            "elementId": "Set2",
+                            "isVisible": false
+                        }
+                    ]
                 }
             ],
             "id": "Set2",
@@ -146,22 +202,31 @@
             "actions": [
                 {
                     "type": "Action.ToggleVisibility",
-                    "title": "Action.ToggleVisibility"
+                    "title": "Previous Question"
                 },
                 {
                     "type": "Action.ToggleVisibility",
-                    "title": "Action.ToggleVisibility"
+                    "title": "Next Question"
+                }
+            ],
+            "isVisible": false
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.Submit",
+                    "title": "Previous Feedback",
+                    "style": "positive"
+                },
+                {
+                    "type": "Action.Submit",
+                    "title": "✔ Submit Feedback"
                 }
             ],
             "isVisible": false
         }
     ],
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.4",
-    "actions": [
-        {
-            "type": "Action.Submit",
-            "title": "Submit Feedback"
-        }
-    ]
+    "version": "1.4"
 }
