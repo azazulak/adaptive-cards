@@ -3,6 +3,14 @@
     "body": [
         {
             "type": "TextBlock",
+            "text": "EDITOR'S NOTE: 💠this emoji is purely for wayfinding in the editor",
+            "wrap": true,
+            "horizontalAlignment": "Center",
+            "spacing": "Small",
+            "isVisible": false
+        },
+        {
+            "type": "TextBlock",
             "size": "Medium",
             "weight": "Bolder",
             "text": "Qualitative Questions: End of Day Survey",
@@ -52,9 +60,9 @@
                     "spacing": "Small",
                     "separator": true,
                     "style": "expanded",
-                    "id": "Set1",
+                    "id": "Choice1",
                     "label": "Please click the button that best represents your view",
-                    "errorMessage": "poopoopeepee"
+                    "errorMessage": "💣 An error has occurred. Please alert the HiQnA KA Team."
                 }
             ],
             "id": "Q1"
@@ -73,13 +81,27 @@
                         {
                             "elementId": "Q2",
                             "isVisible": true
+                        },
+                        {
+                            "elementId": "Set2",
+                            "isVisible": true
+                        },
+                        {
+                            "elementId": "Set1",
+                            "isVisible": false
                         }
                     ],
                     "style": "positive"
-                },
+                }
+            ],
+            "id": "Set1"
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
                 {
                     "type": "Action.ToggleVisibility",
-                    "title": "Previous Question",
+                    "title": "UNCONFIGURED... Next Question",
                     "targetElements": [
                         {
                             "elementId": "Q1",
@@ -90,16 +112,48 @@
                             "isVisible": true
                         }
                     ],
+                    "style": "positive"
+                },
+                {
+                    "type": "Action.ToggleVisibility",
+                    "title": "Previous Question",
+                    "targetElements": [
+                        {
+                            "elementId": "Q1",
+                            "isVisible": true
+                        },
+                        {
+                            "elementId": "Q2",
+                            "isVisible": false
+                        },
+                        {
+                            "elementId": "Set2",
+                            "isVisible": false
+                        },
+                        {
+                            "elementId": "Set1",
+                            "isVisible": true
+                        }
+                    ],
                     "style": "destructive"
                 }
             ],
-            "id": "Buttons1"
+            "id": "Set2",
+            "isVisible": false
         },
         {
-            "type": "TextBlock",
-            "text": "TEMP Q2",
-            "wrap": true,
-            "id": "Q2"
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.ToggleVisibility",
+                    "title": "Action.ToggleVisibility"
+                },
+                {
+                    "type": "Action.ToggleVisibility",
+                    "title": "Action.ToggleVisibility"
+                }
+            ],
+            "isVisible": false
         }
     ],
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
