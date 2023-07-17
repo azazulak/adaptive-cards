@@ -1,0 +1,80 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "TextBlock",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "Qualitative Questions: End of Day Survey",
+            "horizontalAlignment": "Center",
+            "color": "Accent",
+            "isSubtle": true
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Today, I found the HiQnA KA to be easy-to-use.",
+                    "horizontalAlignment": "Left",
+                    "wrap": true,
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "color": "Accent"
+                },
+                {
+                    "type": "Input.ChoiceSet",
+                    "choices": [
+                        {
+                            "title": "1: 🟥Strongly Disagree ",
+                            "value": "1"
+                        },
+                        {
+                            "title": "2: 🟧Disagree",
+                            "value": "2"
+                        },
+                        {
+                            "title": "3: 🟨Neither Agree nor Disagree",
+                            "value": "3"
+                        },
+                        {
+                            "title": "4: 🟩Agree",
+                            "value": "4"
+                        },
+                        {
+                            "title": "5: ✅Strongly Agree ",
+                            "value": "5"
+                        }
+                    ],
+                    "placeholder": "Responses (Likert Scale)",
+                    "isRequired": true,
+                    "wrap": true,
+                    "spacing": "Small",
+                    "separator": true,
+                    "style": "expanded"
+                }
+            ],
+            "id": "Q1"
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.ToggleVisibility",
+                    "title": "Submit Feedback // Next Question",
+                    "targetElements": [
+                        "Q1"
+                    ]
+                }
+            ]
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.4",
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Send Survey"
+        }
+    ]
+}
