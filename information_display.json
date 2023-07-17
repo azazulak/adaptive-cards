@@ -68,7 +68,10 @@
                     "width": "stretch",
                     "selectAction": {
                         "type": "Action.Submit",
-                        "id": "Yes"
+                        "id": "Yes",
+                        "data": {
+                                "actionSubmitId": "yes",
+                  }
                     },
                     "items": [
                         {
