@@ -25,6 +25,12 @@
             "items": [
                 {
                     "type": "TextBlock",
+                    "text": "Step 1/5 🟣⚫⚫⚫⚫",
+                    "wrap": true,
+                    "horizontalAlignment": "Left"
+                },
+                {
+                    "type": "TextBlock",
                     "text": "Please click the button that best represents your view",
                     "horizontalAlignment": "Left",
                     "wrap": true,
@@ -74,6 +80,12 @@
             "items": [
                 {
                     "type": "TextBlock",
+                    "text": "Step 2/5 ⚫🟣⚫⚫⚫",
+                    "wrap": true,
+                    "horizontalAlignment": "Left"
+                },
+                {
+                    "type": "TextBlock",
                     "text": "Please click the button that best represents your view",
                     "horizontalAlignment": "Left",
                     "wrap": true,
@@ -112,11 +124,121 @@
                     "separator": true,
                     "style": "expanded",
                     "id": "Choice2",
-                    "label": "I received accurate and up-to-day information from the KA today.",
+                    "label": "Today, the HiQnA KA provided me with responses that were relevant to my message.",
                     "errorMessage": "🚩 Please make sure you have selected a response for all four questions."
                 }
             ],
             "id": "Q2",
+            "isVisible": false
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Step 3/5 ⚫⚫🟣⚫⚫",
+                    "wrap": true
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Please click the button that best represents your view",
+                    "horizontalAlignment": "Left",
+                    "wrap": true,
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "color": "Accent"
+                },
+                {
+                    "type": "Input.ChoiceSet",
+                    "choices": [
+                        {
+                            "title": "1: 🟥Strongly Disagree ",
+                            "value": "1"
+                        },
+                        {
+                            "title": "2: 🟧Disagree",
+                            "value": "2"
+                        },
+                        {
+                            "title": "3: 🟨Neither Agree nor Disagree",
+                            "value": "3"
+                        },
+                        {
+                            "title": "4: 🟩Agree",
+                            "value": "4"
+                        },
+                        {
+                            "title": "5: ✅Strongly Agree ",
+                            "value": "5"
+                        }
+                    ],
+                    "placeholder": "Responses (Likert Scale)",
+                    "isRequired": true,
+                    "wrap": true,
+                    "spacing": "Small",
+                    "separator": true,
+                    "style": "expanded",
+                    "id": "Choice3",
+                    "label": "I received accurate and up-to-day information from the KA today.",
+                    "errorMessage": "🚩 Please make sure you have selected a response for all four questions."
+                }
+            ],
+            "id": "Q3",
+            "isVisible": false
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Step 4/5 ⚫⚫⚫🟣⚫",
+                    "wrap": true
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Please click the button that best represents your view",
+                    "horizontalAlignment": "Left",
+                    "wrap": true,
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "color": "Accent"
+                },
+                {
+                    "type": "Input.ChoiceSet",
+                    "choices": [
+                        {
+                            "title": "1: 🟥Strongly Disagree ",
+                            "value": "1"
+                        },
+                        {
+                            "title": "2: 🟧Disagree",
+                            "value": "2"
+                        },
+                        {
+                            "title": "3: 🟨Neither Agree nor Disagree",
+                            "value": "3"
+                        },
+                        {
+                            "title": "4: 🟩Agree",
+                            "value": "4"
+                        },
+                        {
+                            "title": "5: ✅Strongly Agree ",
+                            "value": "5"
+                        }
+                    ],
+                    "placeholder": "Responses (Likert Scale)",
+                    "isRequired": true,
+                    "wrap": true,
+                    "spacing": "Small",
+                    "separator": true,
+                    "style": "expanded",
+                    "id": "Choice4",
+                    "label": "Use of the HiQnA KA reduced the time it took me to solve enquiries today.",
+                    "errorMessage": "🚩 Please make sure you have selected a response for all four questions."
+                }
+            ],
+            "id": "Q4",
             "isVisible": false
         },
         {
@@ -253,8 +375,6 @@
         },
         {
             "type": "ActionSet",
-            "isVisible": false,
-            "id": "Set4",
             "actions": [
                 {
                     "type": "Action.ToggleVisibility",
@@ -263,28 +383,30 @@
                     "targetElements": [
                         {
                             "elementId": "Q3",
-                            "isVisible": true
-                        },
-                        {
-                            "elementId": "Q4",
-                            "isVisible": false,
-                        },
-                        {
-                            "elementId": "Set4",
                             "isVisible": false
                         },
                         {
-                            "elementId": "Set3",
+                            "elementId": "Q4",
+                            "isVisible": false
+                        },
+                        {
+                            "elementId": "Set4",
                             "isVisible": true
+                        },
+                        {
+                            "elementId": "Set3",
+                            "isVisible": false
                         }
                     ]
                 },
                 {
                     "type": "Action.Submit",
-                    "title": "✔ Submit Feedback",
-                    "style":"positive"
+                    "title": "Confirm Choices",
+                    "style": "positive"
                 }
-            ]
+            ],
+            "isVisible": false,
+            "id": "Set4"
         }
     ]
 }
