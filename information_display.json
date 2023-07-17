@@ -70,7 +70,7 @@
                         "type": "Action.Submit",
                         "id": "Yes",
                         "data": {
-                                "actionSubmitId": "yes",
+                                "actionSubmitId": "yes"
                   }
                     },
                     "items": [
