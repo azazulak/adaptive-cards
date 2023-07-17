@@ -6,6 +6,9 @@
         {
             "type": "Container",
             "style": "warning",
+            "bleed": true,
+            "spacing": "None",
+            "isVisible": false,
             "items": [
                 {
                     "type": "ColumnSet",
@@ -41,9 +44,7 @@
                         }
                     ]
                 }
-            ],
-            "bleed": true,
-            "spacing": "None"
+            ]
         },
         {
             "type": "TextBlock",
@@ -68,10 +69,9 @@
                     "width": "stretch",
                     "selectAction": {
                         "type": "Action.Submit",
-                        "id": "Yes",
                         "data": {
-                                "actionSubmitId": "yes"
-                  }
+                            "actionSubmitId": "yes"
+                        }
                     },
                     "items": [
                         {
@@ -150,10 +150,16 @@
             "style": "emphasis",
             "bleed": true,
             "separator": true,
+            "selectAction": {
+                "type": "Action.Submit",
+                "data": {
+                    "actionSubmitId": "cancel"
+                }
+            },
             "items": [
                 {
                     "type": "TextBlock",
-                    "text": "Submit specific feedback on this question and answer pair.",
+                    "text": "Select this field to disregard this interaction.",
                     "horizontalAlignment": "Center",
                     "verticalContentAlignment": "center",
                     "size": "Default",
@@ -168,7 +174,7 @@
     "actions": [
         {
             "type": "Action.Submit",
-            "title": "Disregard Interaction"
+            "title": "Submit feedback on this specific Answer"
         }
     ]
 }
