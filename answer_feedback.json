@@ -20,17 +20,12 @@
             ]
         },
         {
-            "type": "TextBlock",
-            "size": "Medium",
-            "text": "Please provide any specific feedback regarding the most recent answer you have received.",
-            "wrap": true
-        },
-        {
             "type": "Input.Text",
             "placeholder": "Please enter your feedback here.",
             "isRequired": true,
             "id": "TextFeedback",
             "spacing": "Small",
+            "label":"Please provide any specific feedback regarding the most recent answer you have received.",
             "isMultiline": true,
             "errorMessage": "You must input a response in the text box."
         }
