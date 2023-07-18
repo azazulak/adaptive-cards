@@ -22,10 +22,94 @@
         },
         {
             "type": "Container",
+            "id": "InitialQ",
             "items": [
                 {
                     "type": "TextBlock",
-                    "text": "Step 1/5 🟣⚫⚫⚫⚫",
+                    "text": "Step 1/6 🟣⚫⚫⚫⚫⚫",
+                    "wrap": true
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Please tell us about your shift",
+                    "horizontalAlignment": "Left",
+                    "wrap": true,
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "color": "Accent"
+                },
+                {
+                    "type": "Input.ChoiceSet",
+                    "choices": [
+                        {
+                            "title": "Garden's Point",
+                            "value": "Choice 1"
+                        },
+                        {
+                            "title": "Kelvin Grove",
+                            "value": "Choice 2"
+                        },
+                        {
+                            "title": "Work From Home",
+                            "value": "Choice 3"
+                        }
+                    ],
+                    "placeholder": "Today, my primary Job Site was...",
+                    "isRequired": true,
+                    "errorMessage": "🚩 Please make sure you have selected a response for all six questions.",
+                    "style": "expanded",
+                    "label": "Today, my primary Job Site was...",
+                    "id": "job_site"
+                },
+                {
+                    "type": "Input.ChoiceSet",
+                    "choices": [
+                        {
+                            "title": "Service Point",
+                            "value": "Choice 1"
+                        },
+                        {
+                            "title": "Live Chat",
+                            "value": "Choice 2"
+                        },
+                        {
+                            "title": "Phone Service",
+                            "value": "Choice 3"
+                        },
+                        {
+                            "title": "Emails",
+                            "value": "Choice 4"
+                        },
+                        {
+                            "title": "Other",
+                            "value": "Choice 5"
+                        }
+                    ],
+                    "placeholder": "Today, my position involved...",
+                    "style": "expanded",
+                    "label": "Today, I worked in the following positions (multi-select)",
+                    "isRequired": true,
+                    "isMultiSelect": true,
+                    "errorMessage": "🚩 Please make sure you have selected a response for all six questions.",
+                    "id": "positions"
+                },
+                {
+                    "type": "Input.Text",
+                    "placeholder": "Please type your hours in numerical value :)",
+                    "label": "and I worked for the following hours:",
+                    "maxLength": 5,
+                    "isRequired": true,
+                    "errorMessage": "🚩 Please make sure you have selected a response for all six questions.",
+                    "id": "hours_worked"
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Step 2/6 ⚫🟣⚫⚫⚫⚫",
                     "wrap": true,
                     "horizontalAlignment": "Left"
                 },
@@ -70,17 +154,18 @@
                     "style": "expanded",
                     "id": "Choice1",
                     "label": "Today, I found the HiQnA KA to be intuitive and easy-to-use.",
-                    "errorMessage": "🚩 Please make sure you have selected a response for all four questions."
+                    "errorMessage": "🚩 Please make sure you have selected a response for all six questions."
                 }
             ],
-            "id": "Q1"
+            "id": "Q1",
+            "isVisible": false
         },
         {
             "type": "Container",
             "items": [
                 {
                     "type": "TextBlock",
-                    "text": "Step 2/5 ⚫🟣⚫⚫⚫",
+                    "text": "Step 3/6 ⚫⚫🟣⚫⚫⚫",
                     "wrap": true,
                     "horizontalAlignment": "Left"
                 },
@@ -125,7 +210,7 @@
                     "style": "expanded",
                     "id": "Choice2",
                     "label": "Today, the HiQnA KA provided me with responses that were relevant to my message.",
-                    "errorMessage": "🚩 Please make sure you have selected a response for all four questions."
+                    "errorMessage": "🚩 Please make sure you have selected a response for all six questions."
                 }
             ],
             "id": "Q2",
@@ -136,7 +221,7 @@
             "items": [
                 {
                     "type": "TextBlock",
-                    "text": "Step 3/5 ⚫⚫🟣⚫⚫",
+                    "text": "Step 4/6 ⚫⚫⚫🟣⚫⚫",
                     "wrap": true
                 },
                 {
@@ -180,7 +265,7 @@
                     "style": "expanded",
                     "id": "Choice3",
                     "label": "I received accurate and up-to-day information from the KA today.",
-                    "errorMessage": "🚩 Please make sure you have selected a response for all four questions."
+                    "errorMessage": "🚩 Please make sure you have selected a response for all six questions."
                 }
             ],
             "id": "Q3",
@@ -191,7 +276,7 @@
             "items": [
                 {
                     "type": "TextBlock",
-                    "text": "Step 4/5 ⚫⚫⚫🟣⚫",
+                    "text": "Step 5/6 ⚫⚫⚫⚫🟣⚫",
                     "wrap": true
                 },
                 {
@@ -235,7 +320,7 @@
                     "style": "expanded",
                     "id": "Choice4",
                     "label": "Use of the HiQnA KA reduced the time it took me to solve enquiries today.",
-                    "errorMessage": "🚩 Please make sure you have selected a response for all four questions."
+                    "errorMessage": "🚩 Please make sure you have selected a response for all six questions."
                 }
             ],
             "id": "Q4",
@@ -244,6 +329,57 @@
         {
             "type": "ActionSet",
             "actions": [
+                {
+                    "type": "Action.ToggleVisibility",
+                    "title": "Next Question",
+                    "targetElements": [
+                        {
+                            "elementId": "InitialQ",
+                            "isVisible": false
+                        },
+                        {
+                            "elementId": "Q1",
+                            "isVisible": true
+                        },
+                        {
+                            "elementId": "Set1",
+                            "isVisible": true
+                        },
+                        {
+                            "elementId": "Set0",
+                            "isVisible": false
+                        }
+                    ]
+                }
+            ],
+            "id": "Set0"
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.ToggleVisibility",
+                    "title": "Previous Question",
+                    "targetElements": [
+                        {
+                            "elementId": "InitialQ",
+                            "isVisible": true
+                        },
+                        {
+                            "elementId": "Q1",
+                            "isVisible": false
+                        },
+                        {
+                            "elementId": "Set1",
+                            "isVisible": false
+                        },
+                        {
+                            "elementId": "Set0",
+                            "isVisible": true
+                        }
+                    ],
+                    "style": "destructive"
+                },
                 {
                     "type": "Action.ToggleVisibility",
                     "title": "Next Question",
@@ -267,7 +403,8 @@
                     ]
                 }
             ],
-            "id": "Set1"
+            "id": "Set1",
+            "isVisible": false
         },
         {
             "type": "ActionSet",
