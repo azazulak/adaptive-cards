@@ -43,15 +43,15 @@
                     "choices": [
                         {
                             "title": "Garden's Point",
-                            "value": "Choice 1"
+                            "value": "GP"
                         },
                         {
                             "title": "Kelvin Grove",
-                            "value": "Choice 2"
+                            "value": "KG"
                         },
                         {
                             "title": "Work From Home",
-                            "value": "Choice 3"
+                            "value": "WFH"
                         }
                     ],
                     "placeholder": "Today, my primary Job Site was...",
@@ -66,23 +66,23 @@
                     "choices": [
                         {
                             "title": "Service Point",
-                            "value": "Choice 1"
+                            "value": "SP"
                         },
                         {
                             "title": "Live Chat",
-                            "value": "Choice 2"
+                            "value": "chat"
                         },
                         {
                             "title": "Phone Service",
-                            "value": "Choice 3"
+                            "value": "phones"
                         },
                         {
                             "title": "Emails",
-                            "value": "Choice 4"
+                            "value": "emails"
                         },
                         {
                             "title": "Other",
-                            "value": "Choice 5"
+                            "value": "other"
                         }
                     ],
                     "placeholder": "Today, my position involved...",
@@ -91,7 +91,7 @@
                     "isRequired": true,
                     "isMultiSelect": true,
                     "errorMessage": "🚩 Please make sure you have selected a response for all six questions.",
-                    "id": "positions"
+                    "id": "duties"
                 },
                 {
                     "type": "Input.Number",
@@ -151,7 +151,7 @@
                     "spacing": "Small",
                     "separator": true,
                     "style": "expanded",
-                    "id": "Choice1",
+                    "id": "useability",
                     "label": "Today, I found the HiQnA KA to be intuitive and easy-to-use.",
                     "errorMessage": "🚩 Response must be provided xoxo gossip girl"
                 }
@@ -207,7 +207,7 @@
                     "spacing": "Small",
                     "separator": true,
                     "style": "expanded",
-                    "id": "Choice2",
+                    "id": "relevancy",
                     "label": "Today, the HiQnA KA provided me with responses that were relevant to my message.",
                     "errorMessage": "🚩 Please make sure you have selected a response for all six questions."
                 }
@@ -262,7 +262,7 @@
                     "spacing": "Small",
                     "separator": true,
                     "style": "expanded",
-                    "id": "Choice3",
+                    "id": "reliability",
                     "label": "I received accurate and up-to-day information from the KA today.",
                     "errorMessage": "🚩 Please make sure you have selected a response for all six questions."
                 }
@@ -317,7 +317,7 @@
                     "spacing": "Small",
                     "separator": true,
                     "style": "expanded",
-                    "id": "Choice4",
+                    "id": "resolution_efficiency",
                     "label": "Use of the HiQnA KA reduced the time it took me to solve enquiries today.",
                     "errorMessage": "🚩 Please make sure you have selected a response for all six questions."
                 }
