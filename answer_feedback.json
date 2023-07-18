@@ -12,10 +12,10 @@
             "items": [
                 {
                     "type": "TextBlock",
-                    "text": "Feedback For This Answer",
+                    "text": "**Feedback For This Answer**",
                     "wrap": true,
-                    "horizontalAlignment": "Center",
-                    "style": "heading"
+                    "size":"large",
+                    "horizontalAlignment": "Center"
                 }
             ]
         },
