@@ -56,7 +56,7 @@
                     ],
                     "placeholder": "Today, my primary Job Site was...",
                     "isRequired": true,
-                    "errorMessage": "🚩 Please make sure you have selected a response for all six questions.",
+                    "errorMessage": "🚩 Please select a Job Site",
                     "style": "expanded",
                     "label": "Today, my primary Job Site was...",
                     "id": "job_site"
@@ -94,13 +94,12 @@
                     "id": "positions"
                 },
                 {
-                    "type": "Input.Text",
-                    "placeholder": "Please type your hours in numerical value :)",
+                    "type": "Input.Number",
+                    "placeholder": "Please type your hours in numerical value here  :)",
                     "label": "and I worked for the following hours:",
-                    "maxLength": 5,
                     "isRequired": true,
-                    "errorMessage": "🚩 Please make sure you have selected a response for all six questions.",
-                    "id": "hours_worked"
+                    "id": "hours",
+                    "errorMessage": "🚩 Please tell us how many hours you worked."
                 }
             ]
         },
@@ -126,7 +125,7 @@
                     "type": "Input.ChoiceSet",
                     "choices": [
                         {
-                            "title": "1: 🟥Strongly Disagree ",
+                            "title": "1:  🟥Strongly Disagree ",
                             "value": "1"
                         },
                         {
@@ -134,15 +133,15 @@
                             "value": "2"
                         },
                         {
-                            "title": "3: 🟨Neither Agree nor Disagree",
+                            "title": "3: ⬜Neither Agree nor Disagree",
                             "value": "3"
                         },
                         {
-                            "title": "4: 🟩Agree",
+                            "title": "4: 🟨Agree",
                             "value": "4"
                         },
                         {
-                            "title": "5: ✅Strongly Agree ",
+                            "title": "5: 🟩Strongly Agree ",
                             "value": "5"
                         }
                     ],
@@ -154,11 +153,10 @@
                     "style": "expanded",
                     "id": "Choice1",
                     "label": "Today, I found the HiQnA KA to be intuitive and easy-to-use.",
-                    "errorMessage": "🚩 Please make sure you have selected a response for all six questions."
+                    "errorMessage": "🚩 Response must be provided xoxo gossip girl"
                 }
             ],
-            "id": "Q1",
-            "isVisible": false
+            "id": "Q1"
         },
         {
             "type": "Container",
@@ -544,6 +542,61 @@
             ],
             "isVisible": false,
             "id": "Set4"
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.ToggleVisibility",
+                    "title": "Previous Question",
+                    "style": "destructive",
+                    "targetElements": [
+                        {
+                            "elementId": "Q3",
+                            "isVisible": true
+                        },
+                        {
+                            "elementId": "Q4",
+                            "isVisible": false
+                        },
+                        {
+                            "elementId": "Set4",
+                            "isVisible": false
+                        },
+                        {
+                            "elementId": "Set3",
+                            "isVisible": true
+                        }
+                    ]
+                },
+                {
+                    "type": "Action.Submit",
+                    "title": "Submit Survey"
+                },
+                {
+                    "type": "Action.Submit",
+                    "title": "Provide Additional Feedback",
+                    "style": "positive"
+                }
+            ],
+            "isVisible": false,
+            "id": "Set5"
+        },
+        {
+            "type": "Container",
+            "id": "Q6+",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "NOTE: if you are unable to submit your responses, you may have left a question blank. Please review previous questions and answer all fields.",
+                    "wrap": true,
+                    "color": "Attention",
+                    "isSubtle": true,
+                    "size": "Small",
+                    "fontType": "Monospace"
+                }
+            ],
+            "isVisible": false
         }
     ]
 }
