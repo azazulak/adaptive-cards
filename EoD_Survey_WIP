@@ -520,7 +520,7 @@
                     "targetElements": [
                         {
                             "elementId": "Q3",
-                            "isVisible": false
+                            "isVisible": true
                         },
                         {
                             "elementId": "Q4",
@@ -528,11 +528,11 @@
                         },
                         {
                             "elementId": "Set4",
-                            "isVisible": true
+                            "isVisible": false
                         },
                         {
                             "elementId": "Set3",
-                            "isVisible": false
+                            "isVisible": true
                         }
                     ]
                 },
