@@ -156,7 +156,8 @@
                     "errorMessage": "🚩 Response must be provided xoxo gossip girl"
                 }
             ],
-            "id": "Q1"
+            "id": "Q1",
+            "isVisible": false
         },
         {
             "type": "Container",
@@ -188,15 +189,15 @@
                             "value": "2"
                         },
                         {
-                            "title": "3: 🟨Neither Agree nor Disagree",
+                            "title": "3: ⬜Neither Agree nor Disagree",
                             "value": "3"
                         },
                         {
-                            "title": "4: 🟩Agree",
+                            "title": "4: 🟨Agree",
                             "value": "4"
                         },
                         {
-                            "title": "5: ✅Strongly Agree ",
+                            "title": "5: 🟩Strongly Agree ",
                             "value": "5"
                         }
                     ],
@@ -243,15 +244,15 @@
                             "value": "2"
                         },
                         {
-                            "title": "3: 🟨Neither Agree nor Disagree",
+                            "title": "3: ⬜Neither Agree nor Disagree",
                             "value": "3"
                         },
                         {
-                            "title": "4: 🟩Agree",
+                            "title": "4: 🟨Agree",
                             "value": "4"
                         },
                         {
-                            "title": "5: ✅Strongly Agree ",
+                            "title": "5: 🟩Strongly Agree ",
                             "value": "5"
                         }
                     ],
@@ -298,15 +299,15 @@
                             "value": "2"
                         },
                         {
-                            "title": "3: 🟨Neither Agree nor Disagree",
+                            "title": "3: ⬜Neither Agree nor Disagree",
                             "value": "3"
                         },
                         {
-                            "title": "4: 🟩Agree",
+                            "title": "4: 🟨Agree",
                             "value": "4"
                         },
                         {
-                            "title": "5: ✅Strongly Agree ",
+                            "title": "5: 🟩Strongly Agree ",
                             "value": "5"
                         }
                     ],
@@ -322,6 +323,34 @@
                 }
             ],
             "id": "Q4",
+            "isVisible": false
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Step 6/6 ⚫⚫⚫⚫⚫🟣",
+                    "wrap": true
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Thank you for completing the EoD Survey! ",
+                    "wrap": true,
+                    "color": "Accent",
+                    "weight": "Bolder"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Please select \"Submit Survey\" if you're done now, or \"Provide Additional Feedback\" if you'd like to tell us anything else.",
+                    "wrap": true,
+                    "separator": true,
+                    "weight": "Default",
+                    "isSubtle": true,
+                    "size": "Default"
+                }
+            ],
+            "id": "Q5",
             "isVisible": false
         },
         {
@@ -535,9 +564,30 @@
                     ]
                 },
                 {
-                    "type": "Action.Submit",
-                    "title": "Confirm Choices",
-                    "style": "positive"
+                    "type": "Action.ToggleVisibility",
+                    "title": "Next Question",
+                    "targetElements": [
+                        {
+                            "elementId": "Q4",
+                            "isVisible": false
+                        },
+                        {
+                            "elementId": "Q5",
+                            "isVisible": true
+                        },
+                        {
+                            "elementId": "Q5+",
+                            "isVisible": true
+                        },
+                        {
+                            "elementId": "Set5",
+                            "isVisible": true
+                        },
+                        {
+                            "elementId": "Set4",
+                            "isVisible": false
+                        }
+                    ]
                 }
             ],
             "isVisible": false,
@@ -552,19 +602,23 @@
                     "style": "destructive",
                     "targetElements": [
                         {
-                            "elementId": "Q3",
+                            "elementId": "Q4",
                             "isVisible": true
                         },
                         {
-                            "elementId": "Q4",
+                            "elementId": "Q5",
+                            "isVisible": false
+                        },
+                        {
+                            "elementId": "Q5+",
+                            "isVisible": false
+                        },
+                        {
+                            "elementId": "Set5",
                             "isVisible": false
                         },
                         {
                             "elementId": "Set4",
-                            "isVisible": false
-                        },
-                        {
-                            "elementId": "Set3",
                             "isVisible": true
                         }
                     ]
@@ -584,7 +638,7 @@
         },
         {
             "type": "Container",
-            "id": "Q6+",
+            "id": "Q5+",
             "items": [
                 {
                     "type": "TextBlock",
