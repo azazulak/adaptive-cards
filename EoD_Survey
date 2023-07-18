@@ -125,23 +125,23 @@
                     "type": "Input.ChoiceSet",
                     "choices": [
                         {
-                            "title": "1:  🟥Strongly Disagree ",
+                            "title": "🟥 1. Strongly Disagree ",
                             "value": "1"
                         },
                         {
-                            "title": "2: 🟧Disagree",
+                            "title": "🟧 2. Disagree",
                             "value": "2"
                         },
                         {
-                            "title": "3: ⬜Neither Agree nor Disagree",
+                            "title": "⬜ 3. Neither Agree nor Disagree",
                             "value": "3"
                         },
                         {
-                            "title": "4: 🟨Agree",
+                            "title": "🟨 4. Agree",
                             "value": "4"
                         },
                         {
-                            "title": "5: 🟩Strongly Agree ",
+                            "title": "🟩 5. Strongly Agree ",
                             "value": "5"
                         }
                     ],
@@ -153,7 +153,7 @@
                     "style": "expanded",
                     "id": "Choice1",
                     "label": "Today, I found the HiQnA KA to be intuitive and easy-to-use.",
-                    "errorMessage": "🚩 Response must be provided."
+                    "errorMessage": "🚩 Response must be provided xoxo gossip girl"
                 }
             ],
             "id": "Q1",
@@ -181,23 +181,23 @@
                     "type": "Input.ChoiceSet",
                     "choices": [
                         {
-                            "title": "1: 🟥Strongly Disagree ",
+                            "title": "🟥 1. Strongly Disagree ",
                             "value": "1"
                         },
                         {
-                            "title": "2: 🟧Disagree",
+                            "title": "🟧 2. Disagree",
                             "value": "2"
                         },
                         {
-                            "title": "3: ⬜Neither Agree nor Disagree",
+                            "title": "⬜ 3. Neither Agree nor Disagree",
                             "value": "3"
                         },
                         {
-                            "title": "4: 🟨Agree",
+                            "title": "🟨 4. Agree",
                             "value": "4"
                         },
                         {
-                            "title": "5: 🟩Strongly Agree ",
+                            "title": "🟩 5. Strongly Agree ",
                             "value": "5"
                         }
                     ],
@@ -209,7 +209,7 @@
                     "style": "expanded",
                     "id": "Choice2",
                     "label": "Today, the HiQnA KA provided me with responses that were relevant to my message.",
-                    "errorMessage": "🚩 Response must be provided."
+                    "errorMessage": "🚩 Please make sure you have selected a response for all six questions."
                 }
             ],
             "id": "Q2",
@@ -236,23 +236,23 @@
                     "type": "Input.ChoiceSet",
                     "choices": [
                         {
-                            "title": "1: 🟥Strongly Disagree ",
+                            "title": "🟥 1. Strongly Disagree ",
                             "value": "1"
                         },
                         {
-                            "title": "2: 🟧Disagree",
+                            "title": "🟧 2. Disagree",
                             "value": "2"
                         },
                         {
-                            "title": "3: ⬜Neither Agree nor Disagree",
+                            "title": "⬜ 3. Neither Agree nor Disagree",
                             "value": "3"
                         },
                         {
-                            "title": "4: 🟨Agree",
+                            "title": "🟨 4. Agree",
                             "value": "4"
                         },
                         {
-                            "title": "5: 🟩Strongly Agree ",
+                            "title": "🟩 5. Strongly Agree ",
                             "value": "5"
                         }
                     ],
@@ -264,7 +264,7 @@
                     "style": "expanded",
                     "id": "Choice3",
                     "label": "I received accurate and up-to-day information from the KA today.",
-                    "errorMessage": "🚩 Response must be provided."
+                    "errorMessage": "🚩 Please make sure you have selected a response for all six questions."
                 }
             ],
             "id": "Q3",
@@ -291,23 +291,23 @@
                     "type": "Input.ChoiceSet",
                     "choices": [
                         {
-                            "title": "1: 🟥Strongly Disagree ",
+                            "title": "🟥 1. Strongly Disagree ",
                             "value": "1"
                         },
                         {
-                            "title": "2: 🟧Disagree",
+                            "title": "🟧 2. Disagree",
                             "value": "2"
                         },
                         {
-                            "title": "3: ⬜Neither Agree nor Disagree",
+                            "title": "⬜ 3. Neither Agree nor Disagree",
                             "value": "3"
                         },
                         {
-                            "title": "4: 🟨Agree",
+                            "title": "🟨 4. Agree",
                             "value": "4"
                         },
                         {
-                            "title": "5: 🟩Strongly Agree ",
+                            "title": "🟩 5. Strongly Agree ",
                             "value": "5"
                         }
                     ],
@@ -319,7 +319,7 @@
                     "style": "expanded",
                     "id": "Choice4",
                     "label": "Use of the HiQnA KA reduced the time it took me to solve enquiries today.",
-                    "errorMessage": "🚩 Response must be provided."
+                    "errorMessage": "🚩 Please make sure you have selected a response for all six questions."
                 }
             ],
             "id": "Q4",
@@ -642,7 +642,7 @@
             "items": [
                 {
                     "type": "TextBlock",
-                    "text": "NOTE: if you are unable to submit your responses, you may have left a question blank. Please review previous questions and answer all fields.",
+                    "text": "NOTE: if you are unable to submit your responses, you may have left a question blank. Please review your responses and ensure all questions have been answered.",
                     "wrap": true,
                     "color": "Attention",
                     "isSubtle": true,
