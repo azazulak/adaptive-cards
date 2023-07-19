@@ -90,7 +90,12 @@
                     "style": "attention",
                     "width": "stretch",
                     "selectAction": {
-                        "type": "Action.ToggleVisibility"
+                        "type": "Action.ToggleVisibility",
+                         "targetElements": [
+                            {
+                            "elementId": "reportActions"
+                            }
+                        ]
                     },
                     "items": [
                         {
