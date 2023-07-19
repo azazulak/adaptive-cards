@@ -5,17 +5,9 @@
     "body": [
         {
             "type": "TextBlock",
-            "text": "EDITOR'S NOTE: 💠this emoji is purely for wayfinding in the editor",
-            "wrap": true,
-            "horizontalAlignment": "Center",
-            "spacing": "Small",
-            "isVisible": false
-        },
-        {
-            "type": "TextBlock",
             "size": "Medium",
             "weight": "Bolder",
-            "text": "Qualitative Questions: End of Day Survey",
+            "text": "End of Shift Survey",
             "horizontalAlignment": "Center",
             "color": "Accent",
             "isSubtle": true
@@ -54,11 +46,11 @@
                             "value": "WFH"
                         }
                     ],
-                    "placeholder": "Today, my primary Job Site was...",
+                    "placeholder": "On this shift, my primary Job Site was...",
                     "isRequired": true,
                     "errorMessage": "🚩 Please select a Job Site",
                     "style": "expanded",
-                    "label": "Today, my primary Job Site was...",
+                    "label": "On this shift, my primary Job Site was...",
                     "id": "job_site"
                 },
                 {
@@ -66,39 +58,45 @@
                     "choices": [
                         {
                             "title": "Service Point",
-                            "value": "SP"
+                            "value": "F2F"
                         },
                         {
-                            "title": "Live Chat",
-                            "value": "chat"
+                            "title": "In-bound Calls",
+                            "value": "inbound"
                         },
                         {
-                            "title": "Phone Service",
-                            "value": "phones"
+                            "title": "Out-bound Calls",
+                            "value": "outbound"
+                        },
+                        {
+                            "title": "Hybrid Calls + Chats",
+                            "value": "hybrid"
+                        },
+                        {
+                            "title": "Chats",
+                            "value": "chats"
                         },
                         {
                             "title": "Emails",
                             "value": "emails"
                         },
                         {
-                            "title": "Other",
+                            "title": "Other (project, QUT Connect, etc...)",
                             "value": "other"
                         }
                     ],
-                    "placeholder": "Today, my position involved...",
-                    "style": "expanded",
-                    "label": "Today, I worked in the following positions (multi-select)",
+                    "placeholder": "The duty I spent most of my time doing was...",
+                    "label": "On this shift, my primary duty was...",
                     "isRequired": true,
-                    "isMultiSelect": true,
                     "errorMessage": "🚩 Please make sure you have selected a response for all six questions.",
-                    "id": "duties"
+                    "id": "duty"
                 },
                 {
                     "type": "Input.Number",
-                    "placeholder": "Please type your hours in numerical value here  :)",
+                    "placeholder": "Please input your hours in decimal format. Example: 8 and half hours = 8.5",
                     "label": "and I worked for the following hours:",
                     "isRequired": true,
-                    "id": "hours",
+                    "id": "shift_length",
                     "errorMessage": "🚩 Please tell us how many hours you worked."
                 }
             ]
@@ -114,7 +112,118 @@
                 },
                 {
                     "type": "TextBlock",
-                    "text": "Please click the button that best represents your view",
+                    "text": "Please select the option that best represents your view.",
+                    "horizontalAlignment": "Left",
+                    "wrap": true,
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "color": "Accent"
+                },
+                {
+                    "type": "Input.ChoiceSet",
+                    "choices": [
+                        {
+                            "title": "🟥 1. Never",
+                            "value": "1"
+                        },
+                        {
+                            "title": "🟧 2. Rarely",
+                            "value": "2"
+                        },
+                        {
+                            "title": "⬜ 3. Sometimes",
+                            "value": "3"
+                        },
+                        {
+                            "title": "🟨 4. Often",
+                            "value": "4"
+                        },
+                        {
+                            "title": "🟩 5. Always",
+                            "value": "5"
+                        }
+                    ],
+                    "placeholder": "Responses (Likert Scale)",
+                    "isRequired": true,
+                    "wrap": true,
+                    "spacing": "Small",
+                    "separator": true,
+                    "style": "expanded",
+                    "id": "reliability",
+                    "label": "On this shift, the responses I received were factually correct and up-to-date.",
+                    "errorMessage": "🚩 Response must be provided xoxo gossip girl"
+                }
+            ],
+            "id": "Q1",
+            "isVisible": false
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Step 3/6 ⚫⚫🟣⚫⚫⚫",
+                    "wrap": true,
+                    "horizontalAlignment": "Left"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Please select the option that best represents your view.",
+                    "horizontalAlignment": "Left",
+                    "wrap": true,
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "color": "Accent"
+                },
+                {
+                    "type": "Input.ChoiceSet",
+                    "choices": [
+                        {
+                            "title": "🟥 1. Never",
+                            "value": "1"
+                        },
+                        {
+                            "title": "🟧 2. Rarely",
+                            "value": "2"
+                        },
+                        {
+                            "title": "⬜ 3. Sometimes",
+                            "value": "3"
+                        },
+                        {
+                            "title": "🟨 4. Often",
+                            "value": "4"
+                        },
+                        {
+                            "title": "🟩 5. Always",
+                            "value": "5"
+                        }
+                    ],
+                    "placeholder": "Responses (Likert Scale)",
+                    "isRequired": true,
+                    "wrap": true,
+                    "spacing": "Small",
+                    "separator": true,
+                    "style": "expanded",
+                    "id": "relevancy",
+                    "label": "On this shift, the responses I received were relevant to my queries.",
+                    "errorMessage": "🚩 Please make sure you have selected a response for all six questions."
+                }
+            ],
+            "id": "Q2",
+            "isVisible": false
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Step 4/6 ⚫⚫⚫🟣⚫⚫",
+                    "wrap": true
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Please select the option that best represents your view.",
                     "horizontalAlignment": "Left",
                     "wrap": true,
                     "size": "Medium",
@@ -152,118 +261,7 @@
                     "separator": true,
                     "style": "expanded",
                     "id": "useability",
-                    "label": "Today, I found the HiQnA KA to be intuitive and easy-to-use.",
-                    "errorMessage": "🚩 Response must be provided xoxo gossip girl"
-                }
-            ],
-            "id": "Q1",
-            "isVisible": false
-        },
-        {
-            "type": "Container",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Step 3/6 ⚫⚫🟣⚫⚫⚫",
-                    "wrap": true,
-                    "horizontalAlignment": "Left"
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "Please click the button that best represents your view",
-                    "horizontalAlignment": "Left",
-                    "wrap": true,
-                    "size": "Medium",
-                    "weight": "Bolder",
-                    "color": "Accent"
-                },
-                {
-                    "type": "Input.ChoiceSet",
-                    "choices": [
-                        {
-                            "title": "🟥 1. Strongly Disagree ",
-                            "value": "1"
-                        },
-                        {
-                            "title": "🟧 2. Disagree",
-                            "value": "2"
-                        },
-                        {
-                            "title": "⬜ 3. Neither Agree nor Disagree",
-                            "value": "3"
-                        },
-                        {
-                            "title": "🟨 4. Agree",
-                            "value": "4"
-                        },
-                        {
-                            "title": "🟩 5. Strongly Agree ",
-                            "value": "5"
-                        }
-                    ],
-                    "placeholder": "Responses (Likert Scale)",
-                    "isRequired": true,
-                    "wrap": true,
-                    "spacing": "Small",
-                    "separator": true,
-                    "style": "expanded",
-                    "id": "relevancy",
-                    "label": "Today, the HiQnA KA provided me with responses that were relevant to my message.",
-                    "errorMessage": "🚩 Please make sure you have selected a response for all six questions."
-                }
-            ],
-            "id": "Q2",
-            "isVisible": false
-        },
-        {
-            "type": "Container",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Step 4/6 ⚫⚫⚫🟣⚫⚫",
-                    "wrap": true
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "Please click the button that best represents your view",
-                    "horizontalAlignment": "Left",
-                    "wrap": true,
-                    "size": "Medium",
-                    "weight": "Bolder",
-                    "color": "Accent"
-                },
-                {
-                    "type": "Input.ChoiceSet",
-                    "choices": [
-                        {
-                            "title": "🟥 1. Strongly Disagree ",
-                            "value": "1"
-                        },
-                        {
-                            "title": "🟧 2. Disagree",
-                            "value": "2"
-                        },
-                        {
-                            "title": "⬜ 3. Neither Agree nor Disagree",
-                            "value": "3"
-                        },
-                        {
-                            "title": "🟨 4. Agree",
-                            "value": "4"
-                        },
-                        {
-                            "title": "🟩 5. Strongly Agree ",
-                            "value": "5"
-                        }
-                    ],
-                    "placeholder": "Responses (Likert Scale)",
-                    "isRequired": true,
-                    "wrap": true,
-                    "spacing": "Small",
-                    "separator": true,
-                    "style": "expanded",
-                    "id": "reliability",
-                    "label": "I received accurate and up-to-day information from the KA today.",
+                    "label": "On this shift, I found the HiQnA KA to be intuitive and easy-to-use.",
                     "errorMessage": "🚩 Please make sure you have selected a response for all six questions."
                 }
             ],
@@ -280,7 +278,7 @@
                 },
                 {
                     "type": "TextBlock",
-                    "text": "Please click the button that best represents your view",
+                    "text": "Please select the option that best represents your view.",
                     "horizontalAlignment": "Left",
                     "wrap": true,
                     "size": "Medium",
@@ -318,7 +316,7 @@
                     "separator": true,
                     "style": "expanded",
                     "id": "resolution_efficiency",
-                    "label": "Use of the HiQnA KA reduced the time it took me to solve enquiries today.",
+                    "label": "On this shift, the HiQnA KA reduced the time it took me to solve enquiries.",
                     "errorMessage": "🚩 Please make sure you have selected a response for all six questions."
                 }
             ],
@@ -335,7 +333,7 @@
                 },
                 {
                     "type": "TextBlock",
-                    "text": "Thank you for completing the EoD Survey! ",
+                    "text": "Thank you for completing the End of Shift Survey! ",
                     "wrap": true,
                     "color": "Accent",
                     "weight": "Bolder"
