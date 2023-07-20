@@ -1,0 +1,73 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.4",
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "TextBlock",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "Pilot Test User Authentication",
+            "horizontalAlignment": "Center",
+            "color": "Accent",
+            "isSubtle": true
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "Input.Text",
+                    "placeholder": "Often your last name followed by your first initial.",
+                    "id": "StaffUsername",
+                    "label": "Please provide your QUT staff username",
+                    "isRequired": true,
+                    "errorMessage": "Please provide your staff username."
+                },
+                {
+                    "type": "Input.ChoiceSet",
+                    "choices": [
+                        {
+                            "title": "HiQ Peer Concierge",
+                            "value": "conci"
+                        },
+                        {
+                            "title": "Advisor - SA",
+                            "value": "sa_advisor"
+                        },
+                        {
+                            "title": "Advisor - IT",
+                            "value": "it_advisor"
+                        },
+                        {
+                            "title": "Advisor - Cross-trained",
+                            "value": "x_advisor"
+                        },
+                        {
+                            "title": "DEC - SA",
+                            "value": "sa_dec"
+                        },
+                        {
+                            "title": "DEC - IT",
+                            "value": "it_dec"
+                        },
+                        {
+                            "title": "DEC - SP",
+                            "value": "sp_dec"
+                        }
+                    ],
+                    "placeholder": "Select this field to view available role options.",
+                    "id": "role",
+                    "label": "Please select your main role as a staff member in QUT.",
+                    "isRequired": true,
+                    "errorMessage": "Please select a role."
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+        "type": "Action.Submit",
+        "title": "Submit"
+        }
+    ]
+}
